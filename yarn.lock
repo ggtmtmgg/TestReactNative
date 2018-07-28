@@ -4551,9 +4551,9 @@ react-is@^16.4.1:
   version "16.4.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.4.1.tgz#d624c4650d2c65dbd52c72622bbf389435d9776e"
 
-"react-native@git+https://git@github.com/facebook/react-native.git":
+"react-native@git+https://git@github.com/ggtmtmgg/react-native.git":
   version "1000.0.0"
-  resolved "git+https://git@github.com/facebook/react-native.git#6b5343019c11251f5f0ab09d90c704d0353b51a1"
+  resolved "git+https://git@github.com/ggtmtmgg/react-native.git#40f6998b6766e8aa3c038a1416e5c62cbafca109"
   dependencies:
     absolute-path "^0.0.0"
     art "^0.10.0"
