@@ -7,23 +7,35 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, Button} from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
 
-type Props = {};
-export default class App extends Component<Props> {
+const Example = props => {
+  debugger
+  return (
+    <Button
+      title="Click"
+      onPress={() => {
+        this.count = (this.count || 0) + 1;
+        props.setCount(this.count);
+      }}
+    />
+  );
+}
+
+export default class App extends React.Component {
+  state = {
+    count1: 0,
+    count2: 0,
+  };
   render() {
+    debugger;
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+      <View style={{ alignItems: 'center', justifyContent: 'center', flex: 1 }}>
+        <Example setCount={count => this.setState({ count1: count })} />
+        <Text>{this.state.count1}</Text>
+        <Example setCount={count => this.setState({ count2: count })} />
+        <Text>{this.state.count2}</Text>
       </View>
     );
   }
