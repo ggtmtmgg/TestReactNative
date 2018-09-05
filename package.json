@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "react": "16.4.1",
-    "react-native": "git+https://git@github.com/ggtmtmgg/react-native.git#0.56-stable"
+    "react-native": "git+https://git@github.com/ggtmtmgg/react-native.git#0.57-stable"
   },
   "devDependencies": {
     "babel-jest": "23.4.0",
