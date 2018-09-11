@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, ScrollView} from 'react-native';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -19,11 +19,18 @@ const instructions = Platform.select({
 type Props = {};
 export default class App extends Component<Props> {
   render() {
+    let items = [{key:'0'},{key:'1'},{key:'2'},{key:'3'},{key:'4'},{key:'5'},{key:'6'},{key:'7'},{key:'8'},{key:'9'}];
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+      <View>
+        <ScrollView style={{height: 100}}>
+          {
+            items.slice(0, 10).map((item, index) => (
+              <View style={{marginTop: '1%'}}>
+                <View><Text>{index}. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</Text></View>
+              </View>
+            ))
+          }
+        </ScrollView>
       </View>
     );
   }
