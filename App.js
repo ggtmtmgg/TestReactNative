@@ -9,6 +9,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, ScrollView} from 'react-native';
 
+console.disableYellowBox = true;
 type Props = {};
 export default class App extends Component<Props> {
   render() {
@@ -19,7 +20,7 @@ export default class App extends Component<Props> {
           {
             items.slice(0, 10).map((item, index) => (
               <View style={{marginTop: '1%'}}>
-                <View><Text>{index}. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</Text></View>
+                <Text>{index}. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</Text>
               </View>
             ))
           }
